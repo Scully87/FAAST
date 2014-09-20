@@ -8,7 +8,7 @@ The FAAST system will cater for the follwoing:
 	  carriages of the train.
 	~ A passenger will touch in at the station and touch out at the destination station
 	~ Each carriage of a train can hold up to 40 passengers
-	~ Each train is made of a number of carriage
+	~ Each train is made of a number of carriages
 
 BONUS
 

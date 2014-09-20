@@ -15,6 +15,7 @@ class Carriage
 	end
 
 	def board(passenger)
+			raise "Sorry, Carriage is Full!" if full?
 			@passengers << passenger
 	end
  

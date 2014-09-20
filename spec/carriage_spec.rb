@@ -5,10 +5,10 @@ require 'carriage'
 
 describe Carriage do
 
-let(:passenger) { Passenger.new }
-let(:train) { Train.new }
-let(:staton) { Station.new }
-let(:carriage) { Carriage.new(:capacity => 40) }
+	let(:passenger) { Passenger.new }
+	let(:train) { Train.new }
+	let(:staton) { Station.new }
+	let(:carriage) { Carriage.new(:capacity => 40) }
 
 	it "should allow passengers to board carriage" do
 		expect(carriage.passenger_count).to eq(0)
@@ -26,5 +26,10 @@ let(:carriage) { Carriage.new(:capacity => 40) }
 		expect(carriage).not_to be_full
 		40.times { carriage.board(passenger) }
 		expect(carriage).to be_full
+	end	
+
+	it "should not accept a passenger when it's full" do
+		40.times { carriage.board(passenger) }
+		expect { carriage.board(passenger) }.to raise_error("Sorry, Carriage is Full!")
 	end	
 end

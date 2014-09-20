@@ -1,7 +1,4 @@
 require 'station'
-require 'passenger'
-require 'carriage'
-require 'train'
 
 describe Station do 
 	

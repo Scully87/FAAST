@@ -5,9 +5,7 @@ class Carriage
 	def initialize(options = {})
 			@capacity = options.fetch(:capacity, DEFAULT_CAPACITY)
 			@passengers = []
-			@carriage = []
-			@train = []
-			@station = []
+			
 	end
 
 	def passenger_count

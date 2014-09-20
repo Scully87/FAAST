@@ -3,7 +3,6 @@ class Station
 	def initialize
 			@passengers = []
 			@train = []
-			@station = []
 	end
 
 	def passenger_count

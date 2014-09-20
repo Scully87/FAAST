@@ -7,8 +7,8 @@ describe Carriage do
 	end
 
 	let(:passenger) { Passenger.new }
-	let(:train) { Train.new }
-	let(:staton) { Station.new }
+#	let(:train) { Train.new }
+#	let(:staton) { Station.new }
 	let(:carriage) { Carriage.new(:capacity => 40) }
 
 #	it "should allow passengers to board carriage" do

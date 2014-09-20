@@ -3,7 +3,7 @@ require 'passenger'
 describe Passenger do
 
 let (:passenger) { Passenger.new }
-let (:station) { Station.new }
+#let (:station) { Station.new }
 let (:carriage) { Carriage.new }
 
 #	it "should be able to touch in at station" do 

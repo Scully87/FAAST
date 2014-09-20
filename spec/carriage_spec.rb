@@ -5,6 +5,10 @@ require 'carriage'
 
 describe Carriage do
 
+	def full_carriage(carriage)
+		40.times { carriage.board(passenger) }
+	end
+
 	let(:passenger) { Passenger.new }
 	let(:train) { Train.new }
 	let(:staton) { Station.new }
@@ -24,12 +28,12 @@ describe Carriage do
 
 	it "should know when it's full" do
 		expect(carriage).not_to be_full
-		40.times { carriage.board(passenger) }
+		full_carriage(carriage)
 		expect(carriage).to be_full
 	end	
 
 	it "should not accept a passenger when it's full" do
-		40.times { carriage.board(passenger) }
+		full_carriage(carriage)
 		expect { carriage.board(passenger) }.to raise_error("Sorry, Carriage is Full!")
 	end	
 end

@@ -1,5 +1,15 @@
 class Passenger
 
+	DEFAULT_BALANCE = 10
+	
+	def initialize(options = {})
+			@balance = options.fetch(:balance, DEFAULT_BALANCE)
+	end	
+
+	def balance
+			@balance
+	end
+
 	def at_station?
 			!@station.nil?
 	end
@@ -23,5 +33,7 @@ class Passenger
 	def exit(carriage)
 			@carriage = nil
 	end
+
+
 
 end

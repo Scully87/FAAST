@@ -2,7 +2,7 @@ require 'passenger'
 
 describe Passenger do
 
-	let (:passenger) { Passenger.new }
+	let (:passenger) { Passenger.new(:balance => 5) }
 	let (:carriage) { Carriage.new }
 
 	it "should be able to enter a carriage" do
@@ -17,4 +17,9 @@ describe Passenger do
 		passenger.exit(carriage)
 		expect(passenger.on_carriage?).to eq(false)
 	end
+
+	it "should be allowed to have an account balance" do 
+		expect(passenger.balance).to eq(5)
+	end
+
 end

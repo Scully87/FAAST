@@ -1,8 +1,19 @@
 class Station
 
-	def initialize
+	DEFAULT_BALANCE = 10
+
+	def initialize(options = {})
 			@passengers = []
 			@train = []
+			@balance = options.fetch(:balance, DEFAULT_BALANCE)
+	end	
+
+	def balance
+			@balance
+	end
+
+	def balance_check(passenger)
+			passenger.balance
 	end
 
 	def passenger_count
@@ -11,7 +22,14 @@ class Station
 
 	def touch_in(passenger)
 			@passengers << passenger
+#			raise "Insufficient Funds" if low?
+				unless balance_check(passenger) < 2
+				end 
 	end
+
+#	def low?
+#			balance < 2
+#	end
 
 	def touch_out(passenger)
 			@passengers.delete(passenger)
@@ -28,4 +46,5 @@ class Station
 	def train_depart(train)
 			@train.delete(train)
 	end
+
 end

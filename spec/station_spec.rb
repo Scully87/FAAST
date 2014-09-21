@@ -4,11 +4,8 @@ describe Station do
 	
 	let(:station) { Station.new }
 	let(:passenger) { Passenger.new }
-	let(:carriage) { Carriage.new }
 	let(:train) { Train.new }
 
-
-	
 	it "should allow passengers to touch in" do
 		expect(station.passenger_count).to eq(0)
 		station.touch_in(passenger)

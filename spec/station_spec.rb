@@ -13,12 +13,6 @@ describe Station do
 		expect(station.passenger_count).to eq(1)
 	end
 
-#	it "should not accept passengers with less than 2GBP" do
-#		station.touch_in(passenger)
-#		expect(passenger.balance).not_to be_low 
-#		expect{ (passenger.balance).not_to be low }.to raise_error("Insufficient Funds")
-#	end
-
 	it "should allow passengers to touch out" do
 		station.touch_in(passenger)
 		station.touch_out(passenger)

@@ -22,14 +22,9 @@ class Station
 
 	def touch_in(passenger)
 			@passengers << passenger
-#			raise "Insufficient Funds" if low?
 				unless balance_check(passenger) < 2
 				end 
 	end
-
-#	def low?
-#			balance < 2
-#	end
 
 	def touch_out(passenger)
 			@passengers.delete(passenger)

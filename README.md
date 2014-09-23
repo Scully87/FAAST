@@ -32,4 +32,4 @@ INITIAL PROCESS
 	~ 2. Passenger1 boards carriage1
 	~ 3. Train1 moves carriage1 from station1 to station2
 	~ 4. Passenger1 leaves carriage1
-	~ 5. Passenger1 touches out at station2
+	~ 5. Passenger1 touches out at station2a

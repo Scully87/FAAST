@@ -2,24 +2,39 @@ class Station
 
 	def initialize
 			@passengers = []
-			@train = []
+			@train = []		
+	end	
+
+	def balance_check(passenger)
+			passenger.balance
 	end
 
-	def passengers
-			@passengers
+	def passenger_count
+			@passengers.count
 	end
 
 	def touch_in(passenger)
 			@passengers << passenger
+				unless balance_check(passenger) < 2
+				end 
 	end
 
-	def arrive(train)
+	def touch_out(passenger)
+			@passengers.delete(passenger)
+	end
+
+	def train_count
+			@train.count
+	end
+
+	def train_arrive(train)
 			@train << train
 	end
 
-	def depart(train)
-			@train.pop
+	def train_depart(train)
+			@train.delete(train)
 	end
+
 end
 
 
@@ -37,42 +52,29 @@ end
 
 
 
+# require_relative 'train'
 
-#class Station
+# class Station
 
-#	def initialize
-#			@passengers = []
-#			@train = []		
-#	end	
+# 	def initialize
+# 			@passengers = []
+# 			@train = []
+# 	end
 
-#	def balance_check(passenger)
-#			passenger.balance
-#	end
+# 	def passengers
+# 			@passengers
+# 	end
 
-#	def passenger_count
-#			@passengers.count
-#	end
+# 	def touch_in(passenger)
+# 			@passengers << passenger
+# 	end
 
-#	def touch_in(passenger)
-#			@passengers << passenger
-#				unless balance_check(passenger) < 2
-#				end 
-#	end
+# 	def arrive(train)
+# 			@passengers << train.passengers
+# 			@train << train
+# 	end
 
-#	def touch_out(passenger)
-#			@passengers.delete(passenger)
-#	end
-
-#	def train_count
-#			@train.count
-#	end
-
-#	def train_arrive(train)
-#			@train << train
-#	end
-
-#	def train_depart(train)
-#			@train.delete(train)
-#	end
-
-#end
+# 	def depart(train)
+# 			@train.pop
+# 	end
+# end

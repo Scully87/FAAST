@@ -1,21 +1,18 @@
-require_relative 'station'
+require_relative 'carriage'
 
 class Train
 
 	def initialize
 			@train = []
+			@carriages = 8.times { Carriage.new }
 	end
 
-	def board(passenger, station)
-			@train << passenger
-			station.passengers.delete(passenger)
-	end
+	def carriage_length
+			@carriages
+	end	
+end	
 
-	def travel(station)
-			@station.move Station.new
-	end
 
-end
 
 
 
@@ -47,21 +44,25 @@ end
 
 
 # require_relative 'station'
-# require_relative 'carriage'
 
 # class Train
 
 # 	def initialize
-# 			@train = []
-# 			@carriages = 8.times { Carriage.new }
+# 			@passengers = []
 # 	end
 
-# 	def carriage_length
-# 			@carriages
+# 	def passengers
+# 			@passengers 
 # 	end
 
-# 	def journey(station_from=nil, station_to)
-# 			station_from.train_depart(self) if station_from !=nil
-# 			station_to.train_arrive(self)	
-# 	end	
-# end	
+# 	def board(passenger, station)
+# 			@passengers << passenger
+# 			station.passengers.delete(passenger)
+# 	end
+
+# 	def travel(station1, station2)
+# 			station2 = []
+
+# 	end
+
+# end

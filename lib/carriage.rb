@@ -3,8 +3,8 @@
 	DEFAULT_CAPACITY = 20
 
 	def initialize(options = {})
-			@capacity = options.fetch(:capacity, DEFAULT_CAPACITY)
-			@passengers = []
+	 	@capacity = options.fetch(:capacity, DEFAULT_CAPACITY)
+		@passengers = []
 	end
 
 	def passenger_count

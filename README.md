@@ -20,18 +20,18 @@ FAAST
 
 #####OBJECTS:
 
- 	- 1.Passenger(s)
- 	- 2.Carriage(s)
- 	- 3.Train(s)
- 	- 4.Station(s)
+ 	- Passenger
+ 	- Carriage
+ 	- Train
+ 	- Station
 
 #####INITIAL PROCESS:
 
-	- 1. Passenger1 touches in at station1
-	- 2. Passenger1 boards carriage1
-	- 3. Train1 moves carriage1 from station1 to station2
-	- 4. Passenger1 leaves carriage1
-	- 5. Passenger1 touches out at station2
+	- Passenger touches in at station
+	- Passenger boards carriage
+	- Train moves carriage from station to station
+	- Passenger leaves carriage
+	- Passenger touches out at station
 
 How to use
 ----------
